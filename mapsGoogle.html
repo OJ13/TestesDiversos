@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exemple Google Map</title>
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2 className="title"> Exemple Maps</h2>
+        <div id="map"></div>
+    </div>
+    <script>
+        function initMap() {
+            var local = {
+                lat: -25.363,
+                lng: 131.044
+            }
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: local,
+                zoom: 4
+            });
+            var marcacao = new google.maps.Marker({
+                position: local,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSQnyy-0-EK8RV-jkC8Wz-ADXH20P9_Nw&callback=initMap">
+    </script>
+
+</body>
+
+</html>
